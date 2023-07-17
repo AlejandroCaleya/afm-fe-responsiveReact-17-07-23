@@ -166,6 +166,7 @@ const Productos = () => {
 						<input
 							type="text"
 							value={editFormData.nombre}
+							placeholder={selectedItem.nombre}
 							onChange={(e) => setEditFormData({ ...editFormData, nombre: e.target.value })}
 						/>{" "}
 						<br />
@@ -173,6 +174,7 @@ const Productos = () => {
 						<input
 							type="number"
 							value={editFormData.categoria}
+							placeholder={selectedItem.categoria}
 							onChange={(e) => setEditFormData({ ...editFormData, categoria: e.target.value })}
 						/>
 						<br />
@@ -180,6 +182,7 @@ const Productos = () => {
 						<input
 							type="number"
 							value={editFormData.precio}
+							placeholder={selectedItem.precio}
 							onChange={(e) => setEditFormData({ ...editFormData, precio: e.target.value })}
 						/>
 						<br />
@@ -187,6 +190,7 @@ const Productos = () => {
 						<input
 							type="number"
 							value={editFormData.stock}
+							placeholder={selectedItem.stock}
 							onChange={(e) => setEditFormData({ ...editFormData, stock: e.target.value })}
 						/>
 						<br />
@@ -194,6 +198,7 @@ const Productos = () => {
 						<input
 							type="number"
 							value={editFormData.fabricante}
+							placeholder={selectedItem.fabricante}
 							onChange={(e) => setEditFormData({ ...editFormData, fabricante: e.target.value })}
 						/>
 						<br />

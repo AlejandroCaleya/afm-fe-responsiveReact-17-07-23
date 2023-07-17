@@ -1,14 +1,9 @@
+p,
 th,
 td {
-	border-collapse: collapse;
-	border: 2px black solid;
 	font-size: 24px;
 	margin: 24px;
 	padding-right: 10px;
-}
-p {
-	font-size: 24px;
-	margin: 24px;
 }
 
 button {

@@ -3,7 +3,7 @@ import { FiEdit, FiXSquare, FiCheckSquare, FiFolderPlus } from "react-icons/fi";
 
 import "./Productos.css";
 
-const Categorias = () => {
+const Fabricantes = () => {
 	const [data, setData] = useState([]);
 	const [selectedItem, setSelectedItem] = useState(null);
 	const [editingItemId, setEditingItemId] = useState(null);
@@ -13,7 +13,7 @@ const Categorias = () => {
 		// Función para obtener los datos de la API
 		const fetchData = async () => {
 			try {
-				const response = await fetch("http://localhost:3000/api/v1/categorias"); // Reemplaza 'API_URL' con la URL de tu API
+				const response = await fetch("http://localhost:3000/api/v1/fabricantes"); // Reemplaza 'API_URL' con la URL de tu API
 				const jsonData = await response.json();
 				setData(jsonData);
 				console.log(jsonData);
@@ -32,7 +32,7 @@ const Categorias = () => {
 	const handleDeleteItem = async (itemId) => {
 		try {
 			// Realizar la solicitud de eliminación al servidor utilizando el ID del elemento
-			await fetch(`http://localhost:3000/api/v1/categorias/${itemId}`, {
+			await fetch(`http://localhost:3000/api/v1/fabricantes/${itemId}`, {
 				method: "DELETE",
 			});
 
@@ -48,7 +48,7 @@ const Categorias = () => {
 
 	const fetchSingleItem = async (itemId) => {
 		try {
-			const response = await fetch(`http://localhost:3000/api/v1/categorias/${itemId}`);
+			const response = await fetch(`http://localhost:3000/api/v1/fabricantes/${itemId}`);
 			const itemData = await response.json();
 			setEditFormData(itemData);
 		} catch (error) {
@@ -60,7 +60,7 @@ const Categorias = () => {
 		e.preventDefault();
 
 		try {
-			const response = await fetch(`http://localhost:3000/api/v1/categorias/${editingItemId}`, {
+			const response = await fetch(`http://localhost:3000/api/v1/fabricantes/${editingItemId}`, {
 				method: "PUT",
 				headers: {
 					"Content-Type": "application/json",
@@ -147,6 +147,7 @@ const Categorias = () => {
 						<input
 							type="text"
 							value={editFormData.nombre}
+							placeholder={selectedItem.nombre}
 							onChange={(e) => setEditFormData({ ...editFormData, nombre: e.target.value })}
 						/>{" "}
 						<br />
@@ -162,4 +163,4 @@ const Categorias = () => {
 	);
 };
 
-export default Categorias;
+export default Fabricantes;

@@ -147,6 +147,7 @@ const Categorias = () => {
 						<input
 							type="text"
 							value={editFormData.nombre}
+							placeholder={selectedItem.nombre}
 							onChange={(e) => setEditFormData({ ...editFormData, nombre: e.target.value })}
 						/>{" "}
 						<br />

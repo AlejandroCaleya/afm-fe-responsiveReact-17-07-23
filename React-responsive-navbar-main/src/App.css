@@ -1,0 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #a4c9dd;
+}
+
+.pages {
+  color: #000000;
+  text-align: center;
+  font-size: 1.5rem;
+  margin-top: 10%;
+}
